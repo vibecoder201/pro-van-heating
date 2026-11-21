@@ -1,1 +1,246 @@
-<h1>Hello World</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pro Vanco Heating and Cooling | Plumbing, Heating, HVAC and Remodeling in the Lower Mainland</title>
+<meta name="description" content="Licensed plumbing, heating, HVAC, remodeling and fireplace service across the Lower Mainland since 1990. Call 604 299 7761.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0E2A33; --ink-2:#17404C; --paper:#F3F5F4; --white:#fff;
+    --steel:#4F6169; --line:#CBD5D8; --gas:#F0B323; --gas-dk:#C48F0B;
+    --max:1180px;
+  }
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{ margin:0; background:var(--paper); color:#18303A; font:400 17px/1.6 'Public Sans',sans-serif; -webkit-font-smoothing:antialiased; }
+  h1,h2,h3{ font-family:'Archivo',sans-serif; font-stretch:112%; margin:0; line-height:1.08; letter-spacing:-0.01em; }
+  h2{ font-weight:800; font-size:clamp(1.9rem,3.6vw,2.7rem); }
+  h3{ font-weight:700; font-size:1.2rem; }
+  p{ margin:0; }
+  a{ color:inherit; }
+  img{ display:block; max-width:100%; }
+  :focus-visible{ outline:3px solid var(--gas); outline-offset:3px; }
+  .wrap{ max-width:var(--max); margin:0 auto; padding:0 28px; }
+
+  /* top bar + hero share the dark field */
+  .dark{ background:var(--ink); color:#E8EFF0; }
+  .bar{ display:flex; justify-content:space-between; align-items:center; padding:20px 0; gap:20px; }
+  .mark{ font-family:'Archivo',sans-serif; font-stretch:112%; font-weight:800; font-size:1.25rem; text-decoration:none; color:#fff; }
+  .mark span{ font-weight:400; color:#A9BEC4; }
+  .bar nav{ display:flex; gap:28px; font-size:0.95rem; }
+  .bar nav a{ text-decoration:none; color:#C5D5D9; }
+  .bar nav a:hover{ color:#fff; }
+  .btn{ display:inline-block; background:var(--gas); color:var(--ink); font-weight:600; text-decoration:none; padding:12px 22px; border-radius:3px; border:0; font:600 1rem 'Public Sans',sans-serif; cursor:pointer; }
+  .btn:hover{ background:#FFC93A; }
+  .btn.line{ background:transparent; color:#fff; box-shadow:inset 0 0 0 1px #5C7A83; }
+  .btn.line:hover{ box-shadow:inset 0 0 0 1px #fff; background:transparent; }
+
+  .hero{ display:grid; grid-template-columns:1.05fr 0.95fr; gap:56px; align-items:stretch; padding:40px 0 72px; }
+  .hero h1{ font-weight:800; font-stretch:100%; font-size:clamp(2.2rem,4.4vw,3.5rem); line-height:1.1; color:#fff; max-width:17ch; }
+  .hero .lede{ margin-top:22px; max-width:46ch; color:#C5D5D9; font-size:1.1rem; }
+  .phones{ margin-top:34px; display:grid; gap:10px; }
+  .phones a{ font-family:'Archivo',sans-serif; font-stretch:112%; font-weight:800; font-size:clamp(1.9rem,4vw,2.8rem); color:var(--gas); text-decoration:none; line-height:1.05; letter-spacing:-0.01em; }
+  .phones a:hover{ color:#FFC93A; }
+  .hero .actions{ margin-top:28px; display:flex; gap:12px; flex-wrap:wrap; }
+  .hero figure{ margin:0; position:relative; min-height:420px; }
+  .hero figure img{ width:100%; height:100%; object-fit:cover; object-position:50% 32%; border-radius:2px; background:var(--ink-2); }
+  .hero figcaption{ position:absolute; left:0; bottom:0; right:0; padding:36px 18px 14px; font-size:0.85rem; color:#fff; background:linear-gradient(transparent,rgba(14,42,51,0.85)); }
+
+  /* facts */
+  .facts{ display:grid; grid-template-columns:repeat(4,1fr); gap:28px; padding:34px 0; }
+  .facts p{ border-top:3px solid var(--gas); padding-top:12px; font-weight:500; font-size:0.98rem; }
+  .facts p span{ display:block; font-weight:400; color:var(--steel); font-size:0.9rem; margin-top:2px; }
+
+  section.block{ padding:84px 0; }
+  .split{ display:grid; grid-template-columns:0.8fr 1.4fr; gap:64px; align-items:start; }
+  .split > div:first-child p{ margin-top:16px; color:var(--steel); max-width:34ch; }
+
+  /* service schedule */
+  .schedule{ border-top:2px solid var(--ink); }
+  .row{ display:grid; grid-template-columns:200px 1fr; gap:24px; padding:22px 0; border-bottom:1px solid var(--line); }
+  .row p{ color:#34505B; max-width:52ch; }
+
+  /* work */
+  .work{ background:var(--white); }
+  .shots{ display:grid; grid-template-columns:repeat(12,1fr); gap:28px 24px; margin-top:44px; }
+  .shots figure{ margin:0; }
+  .shots img{ width:100%; height:100%; object-fit:cover; border-radius:2px; background:#DDE5E7; }
+  .shots .ph{ height:clamp(220px,28vw,360px); }
+  .shots .a{ grid-column:span 7; } .shots .b{ grid-column:span 5; }
+  .shots .c{ grid-column:span 5; } .shots .d{ grid-column:span 7; }
+  .shots .e{ grid-column:span 12; } .shots .e .ph{ height:clamp(200px,24vw,320px); } .shots .e img{ object-position:50% 40%; }
+  .shots figcaption{ margin-top:10px; font-size:0.9rem; color:var(--steel); max-width:60ch; }
+  .lists{ display:grid; grid-template-columns:1fr 1fr; gap:56px; margin-top:64px; }
+  .lists h3{ margin-bottom:6px; }
+  .lists .intro{ color:var(--steel); margin-bottom:10px; max-width:44ch; }
+  .lists ul{ list-style:none; margin:0; padding:0; border-top:2px solid var(--ink); }
+  .lists li{ padding:11px 0; border-bottom:1px solid var(--line); }
+
+  .about p + p{ margin-top:16px; }
+  .about .text{ max-width:62ch; font-size:1.08rem; }
+
+  /* contact */
+  .contact{ display:grid; grid-template-columns:1fr 1fr; gap:64px; padding:84px 0; }
+  .contact h2{ color:#fff; }
+  .contact .lead{ margin-top:16px; color:#C5D5D9; max-width:42ch; }
+  .details{ margin-top:30px; display:grid; gap:14px; }
+  .details a{ font-family:'Archivo',sans-serif; font-stretch:112%; font-weight:700; font-size:1.5rem; text-decoration:none; color:var(--gas); }
+  .details a.mail{ font-family:'Public Sans',sans-serif; font-weight:500; font-size:1.05rem; color:#fff; text-decoration:underline; }
+  form{ background:var(--ink-2); padding:32px; border-radius:3px; }
+  form h3{ color:#fff; margin-bottom:4px; }
+  form .sub{ color:#B5C8CD; font-size:0.95rem; margin-bottom:22px; }
+  label{ display:block; font-size:0.9rem; color:#D5E2E5; margin-bottom:6px; }
+  .field{ margin-bottom:16px; }
+  input,textarea{ width:100%; background:#0E2A33; border:1px solid #4B6B75; color:#fff; padding:12px 14px; font:inherit; border-radius:3px; }
+  input:focus,textarea:focus{ outline:3px solid var(--gas); outline-offset:1px; }
+  textarea{ min-height:96px; resize:vertical; }
+  form .btn{ width:100%; padding:14px; }
+
+  footer{ background:#0A1F26; color:#9DB3B9; font-size:0.9rem; }
+  footer .wrap{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; padding-top:22px; padding-bottom:22px; }
+
+  @media (max-width:900px){
+    .bar nav{ display:none; }
+    .hero,.split,.contact,.lists{ grid-template-columns:1fr; gap:36px; }
+    .hero figure{ min-height:280px; }
+    .facts{ grid-template-columns:1fr 1fr; }
+    .row{ grid-template-columns:1fr; gap:6px; }
+    .shots .a,.shots .b,.shots .c,.shots .d{ grid-column:span 12; }
+    .shots .ph, .shots .e .ph{ height:auto; aspect-ratio:4/3; }
+    section.block,.contact{ padding:56px 0; }
+  }
+  @media (max-width:520px){ .facts{ grid-template-columns:1fr; } .bar .btn{ padding:10px 14px; } }
+</style>
+</head>
+<body>
+
+<div class="dark">
+  <div class="wrap">
+    <div class="bar">
+      <a class="mark" href="#">Pro Vanco <span>Heating and Cooling</span></a>
+      <nav><a href="#services">Services</a><a href="#work">Our work</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+      <a class="btn" href="tel:6042997761">Call 604 299 7761</a>
+    </div>
+    <div class="hero">
+      <div>
+        <h1>Plumbing, heating and HVAC for Lower Mainland homes.</h1>
+        <p class="lede">In business since 1990. Licensed technicians, work done to BC code, and a clear quote before we start.</p>
+        <div class="phones">
+          <a href="tel:6042997761">604 299 7761</a>
+          <a href="tel:6047200304">604 720 0304</a>
+        </div>
+        <div class="actions"><a class="btn line" href="#contact">Request a callback</a></div>
+      </div>
+      <figure>
+        <img src="images/hero.jpg" alt="Pro Vanco Heating and Cooling service van">
+      </figure>
+    </div>
+  </div>
+</div>
+
+<div class="wrap facts">
+  <p>Licensed and insured<span>Every technician on every job</span></p>
+  <p>Built to BC building codes<span>Inspected-ready installations</span></p>
+  <p>No hidden fees<span>Transparent quotes up front</span></p>
+  <p>Clean job sites<span>Full cleanup after every visit</span></p>
+</div>
+
+<section class="block" id="services">
+  <div class="wrap split">
+    <div>
+      <h2>What we do</h2>
+      <p>Six trades under one roof, so one call covers the whole house.</p>
+    </div>
+    <div class="schedule">
+      <div class="row"><h3>Plumbing</h3><p>Repairs, installations, and full system upgrades, done right the first time.</p></div>
+      <div class="row"><h3>Drainage</h3><p>Drain cleaning, sewer line repair, and drainage system installation.</p></div>
+      <div class="row"><h3>Heating</h3><p>Boiler and furnace maintenance, repair, and replacement.</p></div>
+      <div class="row"><h3>HVAC</h3><p>Complete climate control for year-round comfort.</p></div>
+      <div class="row"><h3>Home remodeling</h3><p>Full renovation from concept to completion.</p></div>
+      <div class="row"><h3>Fireplace</h3><p>Installations, system upgrades, and repairs for all fireplace types.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block work" id="work">
+  <div class="wrap">
+    <h2>Recent installations</h2>
+    <div class="shots">
+      <figure class="a"><div class="ph"><img src="images/tankless.jpg" alt="Tankless water heater installation"></div><figcaption>Tankless water heater: a high-efficiency, code-compliant system set up by our licensed technicians.</figcaption></figure>
+      <figure class="b"><div class="ph"><img src="images/workmanship.jpg" alt="Finished mechanical room"></div><figcaption>From tight mechanical rooms to complex retrofits, the work is clean and to code.</figcaption></figure>
+      <figure class="c"><div class="ph"><img src="images/modern.jpg" alt="Tankless system with organized piping"></div><figcaption>High-efficiency tankless system, installed to code with clean, organized piping.</figcaption></figure>
+      <figure class="d"><div class="ph"><img src="images/hvac.jpg" alt="HVAC and heating installation"></div><figcaption>Energy-efficient heating and HVAC, sized to the home.</figcaption></figure>
+      <figure class="e"><div class="ph"><img src="images/zoned.jpg" alt="Zoned heating manifold with organized copper and PEX piping"></div><figcaption>Zoned heating distribution: precision piping and manifolds for balanced, efficient comfort in every room.</figcaption></figure>
+    </div>
+
+    <div class="lists">
+      <div>
+        <h3>What you can expect</h3>
+        <p class="intro">Every installation is carried out by experienced, licensed technicians who take pride in precise workmanship.</p>
+        <ul>
+          <li>Licensed and insured professionals</li>
+          <li>Adherence to BC building codes</li>
+          <li>Thorough job-site cleanup after every visit</li>
+          <li>Transparent quotes with no hidden fees</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Systems we install</h3>
+        <p class="intro">Energy-efficient equipment matched to your home, so you stay warm in winter and cool in summer and spend less doing it.</p>
+        <ul>
+          <li>High-efficiency boilers and furnaces</li>
+          <li>Ductless mini-split systems</li>
+          <li>Heat pump installations</li>
+          <li>Preventative maintenance programs</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block about" id="about">
+  <div class="wrap split">
+    <div><h2>Thirty-five years across the Lower Mainland</h2></div>
+    <div class="text">
+      <p>We started in 1990 as a local handyman service for Vancouver homeowners. Over the years we added licensed plumbing, heating, HVAC and full home remodeling, and thousands of homeowners now call us for all of it.</p>
+      <p>From Burnaby to Surrey and everywhere in between, we've built our reputation on dependable, high-quality work delivered with professionalism and care.</p>
+    </div>
+  </div>
+</section>
+
+<div class="dark" id="contact">
+  <div class="wrap contact">
+    <div>
+      <h2>Ready to transform your home?</h2>
+      <p class="lead">With 35 years of proven expertise and full-service solutions under one roof, we're your single call for every home service need.</p>
+      <div class="details">
+        <a href="tel:6042997761">604 299 7761</a>
+        <a href="tel:6047200304">604 720 0304</a>
+        <a class="mail" href="mailto:ednegahdar@gmail.com">ednegahdar@gmail.com</a>
+      </div>
+    </div>
+    <form action="mailto:ednegahdar@gmail.com" method="post" enctype="text/plain">
+      <h3>Request a callback</h3>
+      <p class="sub">Tell us what you need and we'll call to confirm details and timing.</p>
+      <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" required></div>
+      <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" required></div>
+      <div class="field"><label for="city">City</label><input id="city" name="city" type="text"></div>
+      <div class="field"><label for="job">What do you need done?</label><textarea id="job" name="job"></textarea></div>
+      <button class="btn" type="submit">Send request</button>
+    </form>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Pro Vanco Heating and Cooling, a Merry Enterprises Ltd. company</span>
+    <span>Serving the Lower Mainland since 1990</span>
+  </div>
+</footer>
+
+</body>
+</html>
